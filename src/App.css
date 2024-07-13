@@ -1,0 +1,14 @@
+* {
+  width: 100vw;
+  color: black;
+  /* min-width: 100vw; */
+  /* background-color: #211A1D; */
+  /* main: #6320EE */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+.sun-img {
+  background-image: './img/sun.jpg';
+}
