@@ -1,28 +1,94 @@
 import { useState } from 'react'
 import '../App.css'
-import { Box, Flex, Text } from '@chakra-ui/react'
+import {
+    Box, Flex, Text, Center, Step,
+    StepDescription,
+    StepIcon,
+    StepIndicator,
+    StepNumber,
+    StepSeparator,
+    StepStatus,
+    StepTitle,
+    Stepper,
+    useSteps,
+    Container,
+    ListItem,
+    UnorderedList
+} from '@chakra-ui/react'
 
 function App() {
+    const steps = [
+        { title: 'First', description1: 'blah', description2: 'blah', description3: 'blah', description4: 'blah' },
+
+
+        { title: 'Second', description: '' },
+    ]
+
+    const { activeStep } = useSteps({
+        index: 1,
+        count: steps.length,
+    })
 
     return (
         <>
-            <Box  >
-                <Flex h={'100vh'} w={'100vw'} position={'absolute'} overflow="hidden">
+            <Box className='lilita-one-regular' maxW={'100vw'} overflow={'hidden'}>
+                <Box minH={'90vh'} bg={'#73BA9B'} p={'100px'} fontSize={'40px'} color={'#01110A'}>
+                    hey! welcome to my site
+                    <Text mt={6} color={'#003E1F'}>lsjdddddddddddddddf</Text>
+                    <Text mt={6} color={'#EEE7ED'}>text</Text>
+                    <Text mt={6} color={'#FFC15E'}>LIKE</Text>
+                </Box>
 
-                    <Box bg={'#211A1D'} w={'55vw'} p={{ base: '100px', xl: '200px' }} position={'relative'}>
-                        <Flex w={'100%'}>
-                            <Text color={'white'} fontSize={{ base: '4xl', xl: '8xl' }} zIndex={1} ml={{ base: '0', xl: '70%' }} >Welcome</Text>
-                            <Text fontSize={{ base: '4xl', xl: '8xl' }} color={{ base: 'white', xl: '#9CDF11' }} w={1}>!</Text>
-                        </Flex>
-                        <Text color={'white'} fontSize={{ base: '4xl', xl: '5xl' }} ml={{ base: '4%', xl: '87%' }} zIndex={1} mt={8}>My name is:</Text>
+                <Box bg={'#01110A'} color={'#73BA9B'} fontSize={'40px'} >
+                    <Center color={'#EEE7ED'}>my</Center>
+                    <Flex w={'100%'} p={'90px'}>
+                        <Box w={'50%'}>
+                            <Stepper index={activeStep} orientation='vertical' height='300px' colorScheme={'green'}>
+                                {steps.map((step, index) => (
+                                    <Step key={index} >
+                                        <StepIndicator>
 
-                        <Text color={'#9CDF11'} fontSize={{ base: '4xl', xl: '70px' }} style={{ marginLeft: '133%', zIndex: '9' }} mt={-7}>Mafaro</Text>
-                    </Box>
+                                        </StepIndicator>
 
-                    <Box bg={'#6320EE'} w={'45vw'}>
+                                        <Box flexShrink='0'>
+                                            <StepTitle color={'#FFC15E'}>{step.title}</StepTitle>
+                                            <StepDescription color={'#FFC15E'}>
+                                                <UnorderedList >
+                                                    <ListItem color={'#FFC15E'}>
+                                                        {step.description1}
+                                                    </ListItem>
+                                                    <ListItem color={'#FFC15E'}>
+                                                        {step.description2}
+                                                    </ListItem>
+                                                    <ListItem color={'#FFC15E'}>
+                                                        {step.description3}
+                                                    </ListItem>
+                                                    <ListItem color={'#FFC15E'}>
+                                                        {step.description4}
+                                                    </ListItem>
+                                                </UnorderedList>
+                                            </StepDescription>
+                                        </Box>
 
-                    </Box>
-                </Flex >
+                                        <StepSeparator />
+                                    </Step>
+                                ))}
+                            </Stepper>
+                        </Box>
+
+                        <Box color={'#FFC15E'} w={'50%'}>
+                            sfdsfdfd
+                        </Box>
+                    </Flex>
+                </Box>
+
+                <Box bg={'#73BA9B'} p={'100px'}>
+                    lkjsdf
+                </Box>
+
+                <Box bg={'black'} p={8}>
+                    <Center color={'#73BA9B'}>Made by me ☻2024</Center>
+                </Box>
             </Box>
         </>
     )

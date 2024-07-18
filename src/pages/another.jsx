@@ -36,7 +36,7 @@ export default function another() {
             <Box overflow={'hidden'} className='lilita-one-regular' minH={'100vh'} maxW={'100vw'} bg={back}>
 
 
-                <Box textAlign={'right'} p={8} transition="background-color 9s, transform 9s">
+                <Box textAlign={'right'} p={4} transition="background-color 9s, transform 9s">
                     {colorMode === 'light' ?
                         <Button onClick={toggleColorMode} w={'auto'} bg={'#F7AF9D'} mr={8}>
                             <SunIcon boxSize={6} />
@@ -54,7 +54,7 @@ export default function another() {
 
                 </Center>
 
-                <Text fontSize={{ base: '100px', md: '250px' }}  >
+                <Text fontSize={{ base: '100px', md: '205px' }}  >
                     <Center color={text}>
                         Mafaro
                     </Center>
