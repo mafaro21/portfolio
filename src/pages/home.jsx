@@ -9,7 +9,7 @@ import {
     UnorderedList,
     Image
 } from '@chakra-ui/react'
-import sun from '../img/sun.jpg'
+import life from '../img/life.gif'
 
 function App() {
     const exp1 = [
@@ -57,75 +57,38 @@ function App() {
 
     return (
         <>
-            <Box  >
-                <Box minH='90vh' bg='#73BA9B' >
-                    <Container maxW='1250px' fontSize={'60px'}>
-                        <Text pt={'300px'} color='#01110A'>Welcome to my site</Text>
-                    </Container>
+            <Box bgImage={life}>
+                <Box bg={'white'} minH='7vh' pt={9} bgImage={life}>
                 </Box>
-
-                <Box bg={'#01110A'} color={'#73BA9B'} maxW={'100vw'}>
-                    <Center color={'#EEE7ED'} fontSize={'40px'}>my</Center>
-                    <Container maxW='1250px' p={8}>
-                        <Flex w={'100%'} direction={{ base: "column", md: "row" }}>
-                            <Box color={'#FFC15E'} w={'50%'}>
-                                <Text color={'#FFC15E'} fontSize={'40px'}>First</Text>
-                                <UnorderedList >
-                                    {exp1.map((item) => (
-                                        <ListItem color={'#FFC15E'} fontSize={'20px'}>{item.title}</ListItem>
-                                    ))}
-                                </UnorderedList>
-
-                            </Box>
-
-                            <Box color={'#FFC15E'} w={'50%'} mt={{ base: 9, md: 0 }} ml={{ base: 0, md: 10 }}>
-                                <Text color={'#FFC15E'} fontSize={'40px'}>Second</Text>
-                                <UnorderedList>
-                                    {exp2.map((item) => (
-                                        <ListItem color={'#FFC15E'} fontSize={'20px'}>{item.title}</ListItem>
-                                    ))}
-                                </UnorderedList>
-                            </Box>
+                <Box bgImage={life} borderLeft={'25px double #01110A'} minH='90vh' ml={'159px'} position="relative" _after={{
+                    content: '""',
+                    position: 'absolute',
+                    top: '0',
+                    left: '0',
+                    width: 'calc(100% - 550px)', // Adjust this value based on the desired length of the dashed line
+                    height: '0',
+                    borderTop: '25px solid #01110A',
+                    marginLeft: '550px' // Adjust this value to the length of the dashed line
+                }}>
+                    <Box borderTop={'25px dashed #01110A'} width="90vw" bg={'grey'} bgImage={life}>
+                        <Flex flexDirection={'column'} gap={90} mt={'100px'} position={'relative'}>
+                            <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>About me</Text>
+                            <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>Projects</Text>
+                            <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>ljsdklfjdkl</Text>
+                            <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>ljsdklfjdkl</Text>
                         </Flex>
-                    </Container>
+
+                        <Text textAlign={'right'} fontSize={'260px'} color={'#01110A'}>Mafaro</Text>
+                    </Box>
+
                 </Box>
 
-                <Box bg={'#73BA9B'} >
-                    <Center color='#01110A' fontSize={'40px'}>Projects</Center>
-                    <Container maxW='1250px' p={9} fontSize={'30px'}>
-                        {proj.map((item) => (
-                            <Box mt={9}>
-                                <Text color='#01110A'>{item.title}</Text>
-                                <Flex fontSize={'18px'}>
-                                    <Image src={sun} w={'50%'} borderRadius={'10px'} />
-                                    <Box w={'50%'} pl={5}>
-                                        <UnorderedList>
-                                            <ListItem color='#01110A'>{item.desc}</ListItem>
-                                            <ListItem mt={3} color='#01110A'>Key Features: {item.features}</ListItem>
-                                            <ListItem mt={3} color='#01110A'>{item.stack}</ListItem>
-                                        </UnorderedList>
-                                    </Box>
-                                </Flex>
-                            </Box>
-                        ))}
-
-                    </Container>
-                </Box>
-
-                <Box bg={'#003e1f'} >
-                    <Center color={'#EEE7ED'} fontSize={'40px'} >Contact Me</Center>
-                    <Container maxW='1250px' p={9} fontSize={'30px'}>
-                        <Center justifyContent={'space-around'}>
-                            <Box>Github </Box>
-                            <Box>Email</Box>
-                        </Center>
-                    </Container>
-                </Box>
-
-                <Box bg={'black'} pt={8} pb={8}>
-                    <Center color={'#73BA9B'} fontSize={'20px'}>Made by me ☻2024</Center>
-                </Box>
             </Box>
+            {/* <Box mt={'-310px'}>
+                <Text textAlign={'right'} fontSize={'260px'} color={'#01110A'}>Mafaro</Text>
+            </Box > */}
+            {/* bg='#73BA9B' */}
+            {/* color='#01110A' */}
         </>
     )
 }

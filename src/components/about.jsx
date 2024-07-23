@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    Box, Center, Text, IconButton, Flex, VStack, Button, useColorMode, SimpleGrid, useDisclosure, Modal,
+    Button, useColorMode, Modal,
     ModalOverlay,
     ModalContent,
     ModalHeader,
@@ -15,7 +15,7 @@ export default function About({ isOpen, onClose }) {
 
     return (
         <>
-            <Modal isOpen={isOpen} onClose={onClose} size={'2xl'}>
+            <Modal isOpen={isOpen} onClose={onClose} size={'2xl'} >
                 <ModalOverlay />
                 <ModalContent bg={colorMode === 'light' ? 'about.dark' : ' about.light'}>
                     <ModalHeader></ModalHeader>

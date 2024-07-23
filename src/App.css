@@ -8,3 +8,8 @@
   /* padding: 2rem; */
   /* text-align: center; */
 }
+
+.svg:hover {
+  fill: black;
+  scale: 1;
+}

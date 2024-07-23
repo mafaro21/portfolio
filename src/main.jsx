@@ -12,7 +12,7 @@ import theme from './theme.js'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <Another />
   },
   {
     path: '/test',
@@ -22,13 +22,11 @@ const router = createBrowserRouter([
     path: '/other',
     element: <Other />
   },
-  {
-    path: '/another',
-    element: <Another />
-  },
+  // {
+  //   path: '/another',
+  //   element: <Another />
+  // },
 ])
-
-// console.log(theme)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

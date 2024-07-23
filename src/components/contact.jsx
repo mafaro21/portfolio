@@ -15,14 +15,14 @@ export default function Contact({ isOpen, onClose }) {
         <>
             <Modal isOpen={isOpen} onClose={onClose} size={'lg'} motionPreset='slideInBottom'>
                 <ModalOverlay />
-                <ModalContent bg={colorMode === 'light' ? 'contact.dark' : ' contact.light'}>
-                    <Center><ModalHeader>Contact </ModalHeader></Center>
+                <ModalContent bg={colorMode === 'light' ? 'contact.dark' : ' contact.light'} >
+                    <Center><ModalHeader color={colorMode === 'light' ? 'black' : 'white'}>Contact </ModalHeader></Center>
                     <ModalCloseButton />
-                    <ModalBody>
+                    <ModalBody color={colorMode === 'light' ? 'black' : 'white'}>
                         If you want to get in-touch with me:
-                        <Text mt={3}>Visit my Github github.com/mafaro21</Text>
-                        <Text>Shoot me an email at mafaro2105@gmail.com</Text>
-                        <Text>Checkout my linkedin</Text>
+                        <Text mt={3} color={colorMode === 'light' ? 'black' : 'white'}>Visit my Github github.com/mafaro21</Text>
+                        <Text color={colorMode === 'light' ? 'black' : 'white'}>Shoot me an email at mafaro2105@gmail.com</Text>
+                        <Text color={colorMode === 'light' ? 'black' : 'white'}>Checkout my linkedin</Text>
                     </ModalBody>
 
                     <ModalFooter>
