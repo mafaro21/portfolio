@@ -93,7 +93,7 @@ export default function another() {
                 </Center>
             </Box >
 
-            <Box minH={'8vh'} bg={back}>
+            <Box minH={'10vh'} bg={back}>
                 <Center>
                     <Flex gap={1} >
                         <Link to={'mailto:mafaro2105@gmail.com'} target='_blank' >
