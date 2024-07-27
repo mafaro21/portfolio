@@ -21,13 +21,14 @@ export default function About({ isOpen, onClose }) {
                     <ModalHeader></ModalHeader>
                     <ModalCloseButton />
                     <ModalBody mt={3} color={'white'}>
-                        Hi, I'm Mafaro, a dedicated web developer specializing in front-end development.
+                        Hi, I'm Mafaro, a dedicated web developer based in Harare, Zimbabwe specializing in front-end development.
                         My expertise lies in building responsive web applications using JavaScript, with a strong focus on React.
                         Additionally, I have experience working with cloud technologies, particularly Microsoft Azure.
+
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        <Button colorScheme='red' mr={3} onClick={onClose}>
                             Close
                         </Button>
                     </ModalFooter>

@@ -17,13 +17,23 @@ export default function Experience({ isOpen, onClose }) {
     const { colorMode, toggleColorMode } = useColorMode()
 
     const exp1 = [
-        { title: 'dfd' },
-        { title: 'sgfreg' },
+        { title: 'Infrastructure management using Microsoft Azure' },
+        { title: 'Configuring VPN’s from on premises servers to servers on Azure' },
+        { title: 'Troubleshooting and resolving service-related problems' },
+        { title: 'Facilitating purchase and renewal of domains and SSL Certificates' },
+        { title: 'Microsoft 365 admin management' },
+        { title: 'Commissioning and decommissioning of virtual machines' },
     ]
 
     const exp2 = [
-        { title: 'dfd' },
-        { title: 'sgfreg' },
+        { title: 'Working with frontend technologies like React to build responsive and user friendly web apps' },
+        { title: 'Building and consuming RESTful APIs using Express.js to create server-side logic and handle requests' },
+        { title: 'Creating and managing MySQL databases' },
+        { title: 'Microsoft 365 admin management' },
+        { title: 'Managing which devices have access to our wireless network' },
+        { title: 'Providing technical support to users, troubleshooting hardware and software issues' },
+        { title: 'Setting up and configuring computer systems' },
+        { title: 'Assisting with the installation, configuration, and maintenance of IT equipment' },
     ]
 
     return (
@@ -37,20 +47,22 @@ export default function Experience({ isOpen, onClose }) {
                         <Container maxW='1250px' >
                             <Flex w={'100%'} direction={{ base: "column", md: "row" }}>
                                 <Box w={'50%'}>
-                                    <Text fontSize={'40px'} color={'#FFC15E'}>First</Text>
-                                    <UnorderedList >
+                                    <Text fontSize={'40px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>Sasai</Text>
+                                    <Text fontSize={'25px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>Graduate Trainee (Oct 2021 - June 2024)</Text>
+                                    <UnorderedList mt={3}>
                                         {exp1.map((item) => (
-                                            <ListItem fontSize={'20px'}>{item.title}</ListItem>
+                                            <ListItem color={colorMode === 'light' ? 'black' : 'white'} fontSize={'19px'}>{item.title}</ListItem>
                                         ))}
                                     </UnorderedList>
 
                                 </Box>
 
                                 <Box w={'50%'} mt={{ base: 9, md: 0 }} ml={{ base: 0, md: 10 }}>
-                                    <Text fontSize={'40px'} color={'#FFC15E'}>Second</Text>
-                                    <UnorderedList>
+                                    <Text fontSize={'40px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>Providence Human Capital</Text>
+                                    <Text fontSize={'25px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>IT Officer (July 2024 - present)</Text>
+                                    <UnorderedList mt={3}>
                                         {exp2.map((item) => (
-                                            <ListItem fontSize={'20px'}>{item.title}</ListItem>
+                                            <ListItem color={colorMode === 'light' ? 'black' : 'white'} fontSize={'19px'}>{item.title}</ListItem>
                                         ))}
                                     </UnorderedList>
                                 </Box>
@@ -59,7 +71,7 @@ export default function Experience({ isOpen, onClose }) {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        <Button colorScheme='red' mr={3} onClick={onClose}>
                             Close
                         </Button>
                     </ModalFooter>

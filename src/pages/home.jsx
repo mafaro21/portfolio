@@ -10,6 +10,7 @@ import {
     Image
 } from '@chakra-ui/react'
 import life from '../img/life.gif'
+import hayati from '../img/charon1.jpg'
 
 function App() {
     const exp1 = [
@@ -70,7 +71,7 @@ function App() {
                     borderTop: '25px solid #01110A',
                     marginLeft: '550px' // Adjust this value to the length of the dashed line
                 }}>
-                    <Box borderTop={'25px dashed #01110A'} width="90vw" bg={'grey'} bgImage={life}>
+                    <Box borderTop={'25px dashed #01110A'} bg={'grey'} bgImage={hayati} bgRepeat={'no-repeat'} >
                         <Flex flexDirection={'column'} gap={90} mt={'100px'} position={'relative'}>
                             <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>About me</Text>
                             <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>Projects</Text>
@@ -78,7 +79,7 @@ function App() {
                             <Text ml={'-150px'} as={'b'} color={'yellow'} p={1} pl={4} bg={'black'} w={'6%'}>ljsdklfjdkl</Text>
                         </Flex>
 
-                        <Text textAlign={'right'} fontSize={'260px'} color={'#01110A'}>Mafaro</Text>
+                        <Text textAlign={'right'} fontSize={'260px'} color={'yellow'}>Mafaro</Text>
                     </Box>
 
                 </Box>

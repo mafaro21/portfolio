@@ -37,7 +37,7 @@ export default function another() {
     return (
         <>
 
-            <Box overflow={'hidden'} className='lilita-one-regular' minH={'92vh'} maxW={'100vw'} bg={back}>
+            <Box overflow={'hidden'} className='lilita-one-regular' minH={'90vh'} maxW={'100vw'} bg={back}>
                 <Box textAlign={'right'} p={4} >
                     {colorMode === 'light' ?
                         <Button onClick={toggleColorMode} w={'auto'} bg={'#F7AF9D'} mr={8}>

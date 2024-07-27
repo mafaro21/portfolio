@@ -19,6 +19,8 @@ import twitclone from '../img/twitclone.png'
 import py from '../img/py.png'
 import sole from '../img/sole.png'
 import nssa from '../img/nssa.png'
+import wedemy from '../img/wedemy.png'
+import ess from '../img/ess.png'
 import { Link } from 'react-router-dom'
 
 export default function Projects({ isOpen, onClose }) {
@@ -48,16 +50,6 @@ export default function Projects({ isOpen, onClose }) {
             img: real
         },
         {
-            title: 'soleXchange',
-            desc: 'soleXchange is a modern e-commerce platform dedicated to offering a wide variety of footwear for men, women, and children. It aims to provide customers with an easy and enjoyable online shopping experience, featuring the latest trends and timeless classics.',
-            stack: 'React',
-            stack2: 'Express',
-            stack3: 'Node',
-            stack4: 'PostgreSql',
-            features: 'WIP',
-            img: sole,
-        },
-        {
             title: 'filesort',
             desc: 'filesort is a versatile program designed to help users organize their digital files efficiently. It automates the process of sorting files based on various criteria, reducing clutter and enhancing productivity.',
             stack: 'Python',
@@ -72,7 +64,35 @@ export default function Projects({ isOpen, onClose }) {
             features: 'automatically consolidate differences into separate excel files',
             img: nssa,
             height: '80px',
-        }
+        },
+        {
+            title: 'soleXchange',
+            desc: 'soleXchange is a modern e-commerce platform dedicated to offering a wide variety of footwear for men, women, and children. It aims to provide customers with an easy and enjoyable online shopping experience, featuring the latest trends and timeless classics.',
+            stack: 'React',
+            stack2: 'Express',
+            stack3: 'Node',
+            stack4: 'PostgreSql',
+            features: 'On Hold',
+            img: sole,
+        },
+        {
+            title: 'EmployeeSelfService',
+            desc: 'EmployeeSelfService is a self-service platform designed for employees, offering easy access to manage personal information, view pay slips, request time off, and handle other HR-related tasks efficiently.',
+            stack: 'React',
+            stack2: 'Express',
+            stack3: 'Node',
+            stack4: 'Redux',
+            features: 'apply for leave/ loan, WIP',
+            img: ess,
+        },
+        {
+            title: 'Wedemy',
+            desc: 'Wedemy is an e-learning platform modeled after Udemy.',
+            stack: 'Vue',
+            stack2: 'Typescript',
+            features: 'abandoned',
+            img: wedemy,
+        },
     ]
 
     return (
