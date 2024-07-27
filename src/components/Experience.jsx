@@ -46,7 +46,7 @@ export default function Experience({ isOpen, onClose }) {
                     <ModalBody>
                         <Container maxW='1250px' >
                             <Flex w={'100%'} direction={{ base: "column", md: "row" }}>
-                                <Box w={'50%'}>
+                                <Box w={{ base: '100%', md: '50%' }}>
                                     <Text fontSize={'40px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>Sasai</Text>
                                     <Text fontSize={'25px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>Graduate Trainee (Oct 2021 - June 2024)</Text>
                                     <UnorderedList mt={3}>
@@ -57,7 +57,7 @@ export default function Experience({ isOpen, onClose }) {
 
                                 </Box>
 
-                                <Box w={'50%'} mt={{ base: 9, md: 0 }} ml={{ base: 0, md: 10 }}>
+                                <Box w={{ base: '100%', md: '50%' }} mt={{ base: 9, md: 0 }} ml={{ base: 0, md: 10 }}>
                                     <Text fontSize={'40px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>Providence Human Capital</Text>
                                     <Text fontSize={'25px'} color={colorMode === 'light' ? '#141A32' : '#FFC15E'}>IT Officer (July 2024 - present)</Text>
                                     <UnorderedList mt={3}>
