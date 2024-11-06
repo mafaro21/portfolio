@@ -8,11 +8,13 @@ import Home from './pages/home.jsx'
 import Other from './pages/other.jsx'
 import Another from './pages/another.jsx'
 import theme from './theme.js'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Another />
+    element: <Other />
   },
   {
     path: '/test',
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/other',
-    element: <Other />
+    element: <Another />
   },
   {
     path: '/another',
