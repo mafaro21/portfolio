@@ -162,7 +162,7 @@ export default function Other() {
 
     return (
         <>
-            <Box minH={'100vh'}>
+            <Box minH={'100vh'} bg={'white'}>
                 <Container maxW={'990px'} bg={'#e9ffff'} minH={'100vh'} mb={8} borderRadius={'10px'}>
                     {/* <Center >
                         <Text fontSize={'2xl'} fontWeight={'600'} as={'i'}>Welcome!!</Text>
