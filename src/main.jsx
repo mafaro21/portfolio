@@ -1,38 +1,38 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import App from './App.jsx'
-import Home from './pages/home.jsx'
-import Other from './pages/other.jsx'
-import Another from './pages/another.jsx'
-import theme from './theme.js'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Other from "./pages/other.jsx";
+import theme from "./theme.js";
+import PProjects from "./pages/personalProjects.jsx";
+import Professional from "./pages/professional.jsx";
+import Services from "./pages/services.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Other />
+    path: "/",
+    element: <Other />,
   },
   {
-    path: '/test',
-    element: <Home />
+    path: "/personal-portfolio",
+    element: <PProjects />,
   },
+  // {
+  //   path: "/professional",
+  //   element: <Professional />,
+  // },
   {
-    path: '/other',
-    element: <Another />
+    path: "/services",
+    element: <Services />,
   },
-  {
-    path: '/another',
-    element: <Another />
-  },
-])
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <RouterProvider router={router} />
     </ChakraProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
