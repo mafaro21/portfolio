@@ -54,6 +54,10 @@ import expressjs from "../img/png/expressjs.png";
 import Sidebar from "../components/sidebar";
 import Bottombar from "../components/bottombar";
 import Footer from "../components/footer";
+import mafa from "../img/mafa.png";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function personalProjects() {
   const ref = useRef(null);
@@ -204,15 +208,28 @@ export default function personalProjects() {
                     mt={2}
                     direction={{ base: "column", md: "row" }}
                   >
-                    <Image
-                      src={item.img}
+                    <Box
                       w={{ base: "100%", md: "60%" }}
                       borderRadius={"14px"}
                       h={{ base: item.smallHeight, md: item.height }}
                       onClick={() => handleExpand(item)}
-                      boxShadow={"3px 3px #0f7171"}
+                      // boxShadow={"3px 3px #0f7171"}
                       cursor="pointer"
-                    />
+                    >
+                      <LazyLoadImage
+                        loading="lazy"
+                        src={item.img}
+                        objectFit="cover"
+                        placeholderSrc={mafa}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "14px",
+                        }}
+                        effect="blur"
+                      />
+                    </Box>
                     <Box
                       w={{ base: "100%", md: "50%" }}
                       pl={{ base: "0", md: "5" }}

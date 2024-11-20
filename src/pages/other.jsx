@@ -58,6 +58,8 @@ import flask from "../img/png/flask.png";
 import Sidebar from "../components/sidebar";
 import Bottombar from "../components/bottombar";
 import Footer from "../components/footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Other() {
   const ref = useRef(null);
@@ -264,12 +266,26 @@ export default function Other() {
                     mt={2}
                     direction={{ base: "column", md: "row" }}
                   >
-                    <Image
+                    <Box
                       src={twitclone}
                       w={{ base: "100%", md: "60%" }}
                       borderRadius={"14px"}
-                      boxShadow={"3px 3px #0f7171"}
-                    />
+                      // boxShadow={"3px 3px #0f7171"}
+                    >
+                      <LazyLoadImage
+                        loading="lazy"
+                        src={twitclone}
+                        objectFit="cover"
+                        placeholderSrc={mafa}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "14px",
+                        }}
+                        effect="blur"
+                      />
+                    </Box>
                     <Box
                       w={{ base: "100%", md: "50%" }}
                       pl={{ base: "0", md: "5" }}
