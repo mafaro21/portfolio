@@ -24,12 +24,20 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import { React, useState, useRef } from "react";
 import real from "../img/real1.png";
 import twitclone from "../img/twitclone.png";
+import twitcloneC from "../img/compressed/twitcloneC.webp";
 import py from "../img/py.png";
 import sole from "../img/sole.png";
 import nssa from "../img/nssa.png";
 import wedemy from "../img/wedemy.png";
 import ess from "../img/ess.png";
 import help from "../img/help.png";
+
+import pyC from "../img/compressed/pyC.webp";
+import soleC from "../img/compressed/soleC.webp";
+import wedemyC from "../img/compressed/wedemyC.webp";
+import essC from "../img/compressed/essC.webp";
+import helpC from "../img/compressed/helpC.webp";
+import realC from "../img/compressed/realC.webp";
 
 import github from "../img/svg/github.svg";
 import linkedin from "../img/svg/linkedin.svg";
@@ -81,6 +89,7 @@ export default function personalProjects() {
       features:
         "real-time interactions such as following/unfollowing, tweeting, liking, retweeting",
       img: twitclone,
+      compressed: twitcloneC,
     },
     {
       id: 2,
@@ -93,6 +102,7 @@ export default function personalProjects() {
       stack5: stripe,
       features: "adding to cart, contacting agents, posting comments ",
       img: real,
+      compressed: realC,
     },
     {
       id: 3,
@@ -102,6 +112,7 @@ export default function personalProjects() {
       features:
         "sorting files based on extension & sorting videos based on orientation",
       img: py,
+      compressed: pyC,
     },
     {
       id: 4,
@@ -112,6 +123,7 @@ export default function personalProjects() {
       features:
         "automatically consolidate differences into separate excel files",
       img: nssa,
+      compressed: nssa,
       height: "70px",
       smallHeight: "50px",
     },
@@ -126,6 +138,7 @@ export default function personalProjects() {
       stack5: redux,
       features: "On Hold",
       img: sole,
+      compressed: soleC,
     },
     {
       id: 6,
@@ -138,6 +151,7 @@ export default function personalProjects() {
       stack5: mysql,
       features: "apply for leave/ loan, WIP",
       img: ess,
+      compressed: essC,
     },
     {
       id: 7,
@@ -150,6 +164,7 @@ export default function personalProjects() {
       stack5: mysql,
       features: "Logging tickets",
       img: help,
+      compressed: helpC,
     },
     {
       id: 8,
@@ -159,6 +174,7 @@ export default function personalProjects() {
       stack2: typescript,
       features: "On Hold",
       img: wedemy,
+      compressed: wedemyC,
     },
   ];
 
@@ -220,7 +236,7 @@ export default function personalProjects() {
                         loading="lazy"
                         src={item.img}
                         objectFit="cover"
-                        placeholderSrc={mafa}
+                        placeholderSrc={item.compressed}
                         style={{
                           width: "100%",
                           height: "100%",

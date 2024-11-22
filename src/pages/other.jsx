@@ -26,6 +26,7 @@ import {
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { React, useState, useRef } from "react";
 import privacycure from "../img/privacycure.bmp";
+import twitcloneC from "../img/compressed/twitcloneC.webp";
 import twitclone from "../img/twitclone.png";
 import mafa from "../img/mafa.png";
 import coding from "../img/coding.png";
@@ -276,7 +277,7 @@ export default function Other() {
                         loading="lazy"
                         src={twitclone}
                         objectFit="cover"
-                        placeholderSrc={mafa}
+                        placeholderSrc={twitcloneC}
                         style={{
                           width: "100%",
                           height: "100%",
