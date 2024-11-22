@@ -34,11 +34,6 @@ export default function Bottombar() {
               <Image
                 src={home}
                 h={"30px"}
-                _hover={{
-                  backgroundColor: "#35FF69",
-                  padding: "1px",
-                  borderRadius: "10px",
-                }}
                 // borderRadius={"10px"}
                 borderBottom={currentPath === "/" ? "#35FF69 3px solid" : null}
               />
@@ -50,11 +45,6 @@ export default function Bottombar() {
               <Image
                 src={coding}
                 h={"30px"}
-                _hover={{
-                  backgroundColor: "#35FF69",
-                  padding: "1px",
-                  borderRadius: "10px",
-                }}
                 borderBottom={
                   currentPath === "/personal-portfolio"
                     ? "#35FF69 3px solid"
@@ -69,11 +59,6 @@ export default function Bottombar() {
               <Image
                 src={briefcase}
                 h={"30px"}
-                _hover={{
-                  backgroundColor: "#35FF69",
-                  padding: "1px",
-                  borderRadius: "10px",
-                }}
                 borderBottom={
                   currentPath === "/professional" ? "#35FF69 3px solid" : null
                 }
@@ -86,11 +71,6 @@ export default function Bottombar() {
               <Image
                 src={service}
                 h={"30px"}
-                _hover={{
-                  backgroundColor: "#35FF69",
-                  padding: "1px",
-                  borderRadius: "10px",
-                }}
                 borderBottom={
                   currentPath === "/services" ? "#35FF69 3px solid" : null
                 }
