@@ -174,7 +174,7 @@ export default function Other() {
               </Flex>
 
               <Box mt={6} px={3}>
-                <Text fontSize={{ base: "md", lg: "lg" }}>
+                <Text fontSize={{ base: "md", lg: "lg" }} color={"black"}>
                   Hi I'm Mafaro, a dedicated web developer and certified &
                   registered data protection officer based in Harare, Zimbabwe
                   specializing in front-end development. My expertise lies in
