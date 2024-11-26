@@ -120,13 +120,18 @@ export default function Other() {
 
               <Flex justifyContent={"space-between"}>
                 <Box px={3} pt={5}>
-                  <Text fontWeight={"700"} fontSize={"2xl"}>
+                  <Text fontWeight={"700"} fontSize={"2xl"} color={"black"}>
                     Mafaro Mushonga
                   </Text>
-                  <Text fontWeight={"700"} fontSize={"xl"} mt={"2"}>
+                  <Text
+                    fontWeight={"700"}
+                    fontSize={"xl"}
+                    mt={"2"}
+                    color={"black"}
+                  >
                     Web Developer
                   </Text>
-                  <Text fontWeight={"700"} fontSize={"xl"}>
+                  <Text fontWeight={"700"} fontSize={"xl"} color={"black"}>
                     Data Protection Officer
                   </Text>
                 </Box>
