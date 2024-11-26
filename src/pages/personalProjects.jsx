@@ -303,7 +303,7 @@ export default function personalProjects() {
                         <Flex direction={{ base: "column", lg: "row" }} mt={5}>
                           <Image
                             src={selectedCard.img}
-                            w="100%"
+                            w={{ lg: "50%", xl: "60%" }}
                             borderRadius="10px"
                             height={{
                               base: selectedCard.smallHeight,
