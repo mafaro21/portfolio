@@ -12,7 +12,7 @@ import {
   ListItem,
   Divider,
   HStack,
-  Tag,
+  Button,
   useDisclosure,
   Modal,
   ModalOverlay,
@@ -22,15 +22,21 @@ import {
 } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { React, useState, useRef } from "react";
-import real from "../img/real1.png";
-import twitclone from "../img/twitclone.png";
+import real1 from "../img/real1.webp";
+import real2 from "../img/real2.webp";
+import real3 from "../img/real3.webp";
+import real4 from "../img/real4.webp";
+import twitclone from "../img/twitclone.webp";
+import twit2 from "../img/twit2.webp";
+import twit3 from "../img/twit3.webp";
+import twit4 from "../img/twit4.webp";
 import twitcloneC from "../img/compressed/twitcloneC.webp";
-import py from "../img/py.png";
-import sole from "../img/sole.png";
-import nssa from "../img/nssa.png";
-import wedemy from "../img/wedemy.png";
-import ess from "../img/ess.png";
-import help from "../img/help.png";
+import py from "../img/py.webp";
+import sole from "../img/sole.webp";
+import nssa from "../img/nssa.webp";
+import wedemy from "../img/wedemy.webp";
+import ess from "../img/ess.webp";
+import help from "../img/help.webp";
 
 import pyC from "../img/compressed/pyC.webp";
 import soleC from "../img/compressed/soleC.webp";
@@ -50,7 +56,7 @@ import html from "../img/png/html.png";
 import postgre from "../img/png/postgre.png";
 import python from "../img/png/python.png";
 import stripe from "../img/png/stripe.png";
-import mysql from "../img/png/mysql1.png";
+import mysql from "../img/png/mysql.png";
 import php from "../img/png/php.png";
 import css from "../img/png/css.png";
 import typescript from "../img/png/typescript.png";
@@ -59,6 +65,7 @@ import nodejs from "../img/png/nodejs.png";
 import redux from "../img/png/redux.png";
 import mongodb from "../img/png/mongodb.png";
 import expressjs from "../img/png/expressjs.png";
+
 import Sidebar from "../components/sidebar";
 import Bottombar from "../components/bottombar";
 import Footer from "../components/footer";
@@ -66,6 +73,9 @@ import mafa from "../img/mafa.png";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
 
 export default function personalProjects() {
   const ref = useRef(null);
@@ -76,6 +86,17 @@ export default function personalProjects() {
   const goBack = () => {
     navigate(-1);
   };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
 
   const proj = [
     {
@@ -89,6 +110,9 @@ export default function personalProjects() {
       features:
         "real-time interactions such as following/unfollowing, tweeting, liking, retweeting",
       img: twitclone,
+      img1: twit2,
+      img2: twit3,
+      img3: twit4,
       compressed: twitcloneC,
     },
     {
@@ -101,7 +125,10 @@ export default function personalProjects() {
       stack4: mysql,
       stack5: stripe,
       features: "adding to cart, contacting agents, posting comments ",
-      img: real,
+      img: real1,
+      img1: real2,
+      img2: real3,
+      img3: real4,
       compressed: realC,
     },
     {
@@ -301,17 +328,96 @@ export default function personalProjects() {
                           </Text>
                         </Center>
                         <Flex direction={{ base: "column", lg: "row" }} mt={5}>
-                          <Image
-                            src={selectedCard.img}
-                            w={{ lg: "50%", xl: "60%" }}
-                            borderRadius="10px"
-                            height={{
-                              base: selectedCard.smallHeight,
-                              md: selectedCard.height,
-                            }}
-                            border={"1px solid grey"}
-                          />
-                          <Box w="100%" pl={{ base: 0, md: 5 }}>
+                          <Box
+                            overflow="hidden"
+                            ref={emblaRef}
+                            position="relative"
+                            w={{ base: "100%", lg: "50%" }}
+                          >
+                            <Flex>
+                              <Box flex="0 0 100%">
+                                <Image
+                                  src={selectedCard.img}
+                                  // w="100%"
+                                  borderRadius="10px"
+                                  height={{
+                                    base: selectedCard.smallHeight,
+                                    md: selectedCard.height,
+                                  }}
+                                  border={"1px solid grey"}
+                                />
+                              </Box>
+                              {selectedCard.img1 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img1}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+
+                              {selectedCard.img2 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img2}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+
+                              {selectedCard.img3 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img3}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+                            </Flex>
+
+                            {selectedCard.img1 && (
+                              <Box>
+                                <Button
+                                  position="absolute"
+                                  left="0"
+                                  top="50%"
+                                  transform="translateY(-50%)"
+                                  onClick={scrollPrev}
+                                >
+                                  ‹
+                                </Button>
+                                <Button
+                                  position="absolute"
+                                  right="0"
+                                  top="50%"
+                                  transform="translateY(-50%)"
+                                  onClick={scrollNext}
+                                >
+                                  ›
+                                </Button>
+                              </Box>
+                            )}
+                          </Box>
+
+                          <Box w="40%" pl={{ base: 0, md: 8 }}>
                             <UnorderedList mt={{ base: 5, md: 1 }}>
                               <ListItem fontSize={{ base: "18px", md: "20px" }}>
                                 {selectedCard.desc}

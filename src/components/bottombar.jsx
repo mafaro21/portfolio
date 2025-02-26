@@ -54,7 +54,7 @@ export default function Bottombar() {
             </Link>
           </Box>
 
-          {/* <Box>
+          <Box>
             <Link to={"/professional"}>
               <Image
                 src={briefcase}
@@ -64,7 +64,7 @@ export default function Bottombar() {
                 }
               />
             </Link>
-          </Box> */}
+          </Box>
 
           <Box>
             <Link to={"/services"}>

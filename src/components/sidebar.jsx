@@ -55,7 +55,7 @@ export default function Sidebar() {
             </Link>
           </Tooltip>
 
-          {/* <Tooltip label="Professional Projects">
+          <Tooltip label="Professional Projects">
             <Link to={"/professional"}>
               <Image
                 src={briefcase}
@@ -70,7 +70,7 @@ export default function Sidebar() {
                 }
               />
             </Link>
-          </Tooltip> */}
+          </Tooltip>
 
           <Tooltip label="Services">
             <Link to={"/services"}>

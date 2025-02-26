@@ -18,10 +18,10 @@ const router = createBrowserRouter([
     path: "/personal-portfolio",
     element: <PProjects />,
   },
-  // {
-  //   path: "/professional",
-  //   element: <Professional />,
-  // },
+  {
+    path: "/professional",
+    element: <Professional />,
+  },
   {
     path: "/services",
     element: <Services />,

@@ -12,6 +12,7 @@ import {
   Divider,
   Image,
   Text,
+  Button,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -21,13 +22,28 @@ import {
 import Sidebar from "../components/sidebar";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowBackIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
 
+import privacycure from "../img/privacycure.webp";
+import privacycure1 from "../img/privacycure1.webp";
+import privacycure2 from "../img/privacycure2.webp";
+import privacycureC from "../img/compressed/privacycureC.webp";
+
+import pcaudit from "../img/pcaudit.webp";
+import pcaudit1 from "../img/pcaudit1.webp";
+import pcaudit2 from "../img/pcaudit2.webp";
 import html from "../img/png/html.png";
 import css from "../img/png/css.png";
-import privacycure from "../img/privacycure.bmp";
 import nodejs from "../img/png/nodejs.png";
 import flask from "../img/png/flask.png";
+import express from "../img/png/expressjs.png";
+import next from "../img/png/next.png";
+import typescript from "../img/png/typescript.png";
 import Footer from "../components/footer";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Professional() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -49,16 +65,45 @@ export default function Professional() {
       stack3: nodejs,
       stack4: flask,
       features:
-        "downloading relevant documents related to data protection (CDPA, CDPR), processing and sending emails when potential clients fill in the contact form",
+        "downloading relevant documents related to data protection (CDPA, CDPR), processing and sending emails when potential clients fill in the contact form, english and shona languages",
       img: privacycure,
-      height: "300px",
+      img1: privacycure1,
+      img2: privacycure2,
+      compressed: privacycureC,
+      // height: "300px",
     },
+    // {
+    //   id: 2,
+    //   title: "PC Audit",
+    //   desc: "Privacy Cure is an informational web platform designed to showcase the Data Protection Officer (DPO) services offered. It provides a clear and concise overview of the company's expertise in data compliance, including CDPA assessment, employee training, and breach response. The site is tailored to help businesses understand their obligations under regulations like CDPA and CDPR, ensuring they stay compliant while protecting customer trust.",
+    //   // link: "https://privacycure.com",
+    //   stack: next,
+    //   stack2: typescript,
+    //   stack3: express,
+    //   stack4: nodejs,
+    //   features: "In Progress",
+    //   img: pcaudit,
+    //   img1: pcaudit1,
+    //   img2: pcaudit2,
+    //   // height: "300px",
+    // },
   ];
 
   const handleExpand = (item) => {
     setSelectedCard(item);
     onOpen(); // Opens the modal
   };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
 
   return (
     <>
@@ -110,15 +155,28 @@ export default function Professional() {
                     mt={2}
                     direction={{ base: "column", md: "row" }}
                   >
-                    <Image
-                      src={item.img}
+                    <Box
                       w={{ base: "100%", md: "60%" }}
                       borderRadius={"14px"}
                       h={{ base: item.smallHeight, md: item.height }}
                       onClick={() => handleExpand(item)}
-                      boxShadow={"3px 3px #0f7171"}
+                      // boxShadow={"3px 3px #0f7171"}
                       cursor="pointer"
-                    />
+                    >
+                      <LazyLoadImage
+                        loading="lazy"
+                        src={item.img}
+                        objectFit="cover"
+                        placeholderSrc={item.compressed}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "14px",
+                        }}
+                        effect="blur"
+                      />
+                    </Box>
                     <Box
                       w={{ base: "100%", md: "50%" }}
                       pl={{ base: "0", md: "5" }}
@@ -174,17 +232,95 @@ export default function Professional() {
                           </Text>
                         </Center>
                         <Flex direction={{ base: "column", lg: "row" }} mt={5}>
-                          <Image
-                            src={selectedCard.img}
-                            w="100%"
-                            borderRadius="10px"
-                            height={{
-                              base: selectedCard.smallHeight,
-                              md: selectedCard.height,
-                            }}
-                            border={"1px solid grey"}
-                          />
-                          <Box w="100%" pl={{ base: 0, md: 5 }}>
+                          <Box
+                            overflow="hidden"
+                            ref={emblaRef}
+                            position="relative"
+                            w={{ base: "100%", lg: "50%" }}
+                          >
+                            <Flex>
+                              <Box flex="0 0 100%">
+                                <Image
+                                  src={selectedCard.img}
+                                  w="100%"
+                                  borderRadius="10px"
+                                  height={{
+                                    base: selectedCard.smallHeight,
+                                    md: selectedCard.height,
+                                  }}
+                                  border={"1px solid grey"}
+                                />
+                              </Box>
+                              {selectedCard.img1 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img1}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+
+                              {selectedCard.img2 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img2}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+
+                              {selectedCard.img3 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img3}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+                            </Flex>
+
+                            {selectedCard.img1 && (
+                              <Box>
+                                <Button
+                                  position="absolute"
+                                  left="0"
+                                  top="50%"
+                                  transform="translateY(-50%)"
+                                  onClick={scrollPrev}
+                                >
+                                  ‹
+                                </Button>
+                                <Button
+                                  position="absolute"
+                                  right="0"
+                                  top="50%"
+                                  transform="translateY(-50%)"
+                                  onClick={scrollNext}
+                                >
+                                  ›
+                                </Button>
+                              </Box>
+                            )}
+                          </Box>
+                          <Box w="40%" pl={{ base: 0, md: 8 }}>
                             <UnorderedList mt={{ base: 5, md: 1 }}>
                               <ListItem fontSize={{ base: "18px", md: "20px" }}>
                                 {selectedCard.desc}
