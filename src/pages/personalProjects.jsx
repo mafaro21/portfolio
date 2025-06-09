@@ -37,6 +37,10 @@ import nssa from "../img/nssa.webp";
 import wedemy from "../img/wedemy.webp";
 import ess from "../img/ess.webp";
 import help from "../img/help.webp";
+import beak1 from "../img/beak1.webp";
+import beak2 from "../img/beak2.webp";
+import beak3 from "../img/beak3.webp";
+import beak4 from "../img/beak4.webp";
 
 import pyC from "../img/compressed/pyC.webp";
 import soleC from "../img/compressed/soleC.webp";
@@ -44,6 +48,7 @@ import wedemyC from "../img/compressed/wedemyC.webp";
 import essC from "../img/compressed/essC.webp";
 import helpC from "../img/compressed/helpC.webp";
 import realC from "../img/compressed/realC.webp";
+import beakC from "../img/compressed/beakC.webp";
 
 import github from "../img/svg/github.svg";
 import linkedin from "../img/svg/linkedin.svg";
@@ -59,6 +64,9 @@ import stripe from "../img/png/stripe.png";
 import mysql from "../img/png/mysql.png";
 import php from "../img/png/php.png";
 import css from "../img/png/css.png";
+import next from "../img/png/next.png";
+import tailwind from "../img/png/tailwind.png";
+import go from "../img/png/go.png";
 import typescript from "../img/png/typescript.png";
 import vuejs from "../img/png/vuejs.png";
 import nodejs from "../img/png/nodejs.png";
@@ -114,6 +122,22 @@ export default function personalProjects() {
       img2: twit3,
       img3: twit4,
       compressed: twitcloneC,
+    },
+    {
+      id: 9,
+      title: "Beak. ",
+      desc: "Beak., (Twitclone v2) is a social media web application inspired by X (formerly Twitter). It builds on the foundation of the previous project, Twitclone, offering a more similar design to Twitter and better performance. Like Twitter, Beak helps users connect with friends and family, share updates, and stay informed about each other’s lives.",
+      stack: next,
+      stack2: typescript,
+      stack3: tailwind,
+      stack4: go,
+      features:
+        "(ongoing) real-time interactions such as tweeting, liking, reposting and following/unfollowing",
+      img: beak1,
+      img1: beak2,
+      img2: beak3,
+      img3: beak4,
+      compressed: beakC,
     },
     {
       id: 2,

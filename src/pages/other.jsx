@@ -259,13 +259,13 @@ export default function Other() {
 
                 <Center pt={7}>
                   <Text fontSize={"xl"} fontWeight={"600"} as={"u"}>
-                    Personal Portfolio
+                    Professional Portfolio
                   </Text>
                 </Center>
 
                 <Box mt={5}>
                   <Text color={"black"} fontSize={"xl"} as={"b"}>
-                    Twitclone
+                    PrivacyCure
                   </Text>
                   <Flex
                     fontSize={"18px"}
@@ -280,7 +280,7 @@ export default function Other() {
                     >
                       <LazyLoadImage
                         loading="lazy"
-                        src={twitclone}
+                        src={privacycure}
                         objectFit="cover"
                         placeholderSrc={twitcloneC}
                         style={{
@@ -299,22 +299,29 @@ export default function Other() {
                     >
                       <UnorderedList>
                         <ListItem color={"black"}>
-                          TwitClone is a social media web application inspired
-                          by Twitter. It is designed to help people connect with
-                          friends and family, allowing users to share updates
-                          and stay informed about each other's lives.
+                          Privacy Cure is an informational web platform designed
+                          to showcase the Data Protection Officer (DPO) services
+                          offered. It provides a clear and concise overview of
+                          the company's expertise in data compliance, including
+                          CDPA assessment, employee training, and breach
+                          response. The site is tailored to help businesses
+                          understand their obligations under regulations like
+                          CDPA and CDPR, ensuring they stay compliant while
+                          protecting customer trust.
                         </ListItem>
                         <ListItem mt={3} color={"black"}>
-                          Features: real-time interactions such as
-                          following/unfollowing, tweeting, liking, retweeting
+                          Features: downloading relevant documents related to
+                          data protection (CDPA, CDPR), processing and sending
+                          emails when potential clients fill in the contact
+                          form, english and shona languages
                         </ListItem>
                       </UnorderedList>
 
                       <HStack spacing={1} mt={2} ml={4}>
-                        <Image src={reactLogo} height={"30px"} />
-                        <Image src={expressjs} height={"30px"} />
+                        <Image src={html} height={"30px"} />
+                        <Image src={css} height={"30px"} />
                         <Image src={nodejs} height={"30px"} />
-                        <Image src={mongodb} height={"30px"} />
+                        <Image src={flask} height={"30px"} />
                       </HStack>
                     </Box>
                   </Flex>
@@ -322,7 +329,7 @@ export default function Other() {
                 </Box>
 
                 <Center>
-                  <Link to={"/personal-portfolio"}>
+                  <Link to={"/professional"}>
                     <Button
                       w={"50vw"}
                       variant={"outline"}

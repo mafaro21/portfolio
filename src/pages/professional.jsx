@@ -28,6 +28,7 @@ import { useCallback } from "react";
 import privacycure from "../img/privacycure.webp";
 import privacycure1 from "../img/privacycure1.webp";
 import privacycure2 from "../img/privacycure2.webp";
+import privacycure3 from "../img/privacycure3.webp";
 import privacycureC from "../img/compressed/privacycureC.webp";
 
 import pcaudit from "../img/pcaudit.webp";
@@ -67,8 +68,9 @@ export default function Professional() {
       features:
         "downloading relevant documents related to data protection (CDPA, CDPR), processing and sending emails when potential clients fill in the contact form, english and shona languages",
       img: privacycure,
-      img1: privacycure1,
-      img2: privacycure2,
+      img1: privacycure3,
+      img2: privacycure1,
+      img3: privacycure2,
       compressed: privacycureC,
       // height: "300px",
     },
@@ -79,13 +81,10 @@ export default function Professional() {
     //   // link: "https://privacycure.com",
     //   stack: next,
     //   stack2: typescript,
-    //   stack3: express,
-    //   stack4: nodejs,
     //   features: "In Progress",
     //   img: pcaudit,
     //   img1: pcaudit1,
     //   img2: pcaudit2,
-    //   // height: "300px",
     // },
   ];
 

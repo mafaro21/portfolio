@@ -83,7 +83,7 @@ export default function Sidebar() {
                   borderRadius: "10px",
                 }}
                 borderBottom={
-                  currentPath === "/about" ? "#35FF69 3px solid" : null
+                  currentPath === "/services" ? "#35FF69 3px solid" : null
                 }
               />
             </Link>
