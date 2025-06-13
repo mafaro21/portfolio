@@ -51,7 +51,7 @@ export default function Services() {
                 <ArrowBackIcon
                   w={6}
                   h={6}
-                  _hover={{ backgroundColor: "#35FF69", borderRadius: "15px" }}
+                  _hover={{ backgroundColor: "#35ffa8", borderRadius: "15px" }}
                   onClick={goBack}
                 />
               </Box>

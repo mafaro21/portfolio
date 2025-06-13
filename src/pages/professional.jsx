@@ -125,7 +125,7 @@ export default function Professional() {
                 <ArrowBackIcon
                   w={6}
                   h={6}
-                  _hover={{ backgroundColor: "#35FF69", borderRadius: "15px" }}
+                  _hover={{ backgroundColor: "#35ffa8", borderRadius: "15px" }}
                   onClick={goBack}
                 />
               </Box>
@@ -141,7 +141,7 @@ export default function Professional() {
                     color={"black"}
                     fontSize={"xl"}
                     as={"b"}
-                    _hover={{ color: "green" }}
+                    _hover={{ color: "navy" }}
                   >
                     <Link to={item.link} target="_blank">
                       {item.title}

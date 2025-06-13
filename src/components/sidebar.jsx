@@ -26,12 +26,12 @@ export default function Sidebar() {
                 src={home}
                 h={"30px"}
                 _hover={{
-                  backgroundColor: "#35FF69",
+                  backgroundColor: "#35ffa8",
                   padding: "1px",
                   borderRadius: "10px",
                 }}
                 // borderRadius={"10px"}
-                borderBottom={currentPath === "/" ? "#35FF69 3px solid" : null}
+                borderBottom={currentPath === "/" ? "#35ffa8 3px solid" : null}
               />
             </Link>
           </Tooltip>
@@ -42,13 +42,13 @@ export default function Sidebar() {
                 src={coding}
                 h={"30px"}
                 _hover={{
-                  backgroundColor: "#35FF69",
+                  backgroundColor: "#35ffa8",
                   padding: "1px",
                   borderRadius: "10px",
                 }}
                 borderBottom={
                   currentPath === "/personal-portfolio"
-                    ? "#35FF69 3px solid"
+                    ? "#35ffa8 3px solid"
                     : null
                 }
               />
@@ -61,12 +61,12 @@ export default function Sidebar() {
                 src={briefcase}
                 h={"30px"}
                 _hover={{
-                  backgroundColor: "#35FF69",
+                  backgroundColor: "#35ffa8",
                   padding: "1px",
                   borderRadius: "10px",
                 }}
                 borderBottom={
-                  currentPath === "/professional" ? "#35FF69 3px solid" : null
+                  currentPath === "/professional" ? "#35ffa8 3px solid" : null
                 }
               />
             </Link>
@@ -78,12 +78,12 @@ export default function Sidebar() {
                 src={service}
                 h={"30px"}
                 _hover={{
-                  backgroundColor: "#35FF69",
+                  backgroundColor: "#35ffa8",
                   padding: "1px",
                   borderRadius: "10px",
                 }}
                 borderBottom={
-                  currentPath === "/services" ? "#35FF69 3px solid" : null
+                  currentPath === "/services" ? "#35ffa8 3px solid" : null
                 }
               />
             </Link>

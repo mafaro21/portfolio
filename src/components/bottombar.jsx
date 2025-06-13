@@ -35,7 +35,7 @@ export default function Bottombar() {
                 src={home}
                 h={"30px"}
                 // borderRadius={"10px"}
-                borderBottom={currentPath === "/" ? "#35FF69 3px solid" : null}
+                borderBottom={currentPath === "/" ? "#35ffa8 3px solid" : null}
               />
             </Link>
           </Box>
@@ -47,7 +47,7 @@ export default function Bottombar() {
                 h={"30px"}
                 borderBottom={
                   currentPath === "/personal-portfolio"
-                    ? "#35FF69 3px solid"
+                    ? "#35ffa8 3px solid"
                     : null
                 }
               />
@@ -60,7 +60,7 @@ export default function Bottombar() {
                 src={briefcase}
                 h={"30px"}
                 borderBottom={
-                  currentPath === "/professional" ? "#35FF69 3px solid" : null
+                  currentPath === "/professional" ? "#35ffa8 3px solid" : null
                 }
               />
             </Link>
@@ -72,7 +72,7 @@ export default function Bottombar() {
                 src={service}
                 h={"30px"}
                 borderBottom={
-                  currentPath === "/services" ? "#35FF69 3px solid" : null
+                  currentPath === "/services" ? "#35ffa8 3px solid" : null
                 }
               />
             </Link>

@@ -20,7 +20,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import { ArrowBackIcon } from "@chakra-ui/icons";
+import { ArrowBackIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { React, useState, useRef } from "react";
 import real1 from "../img/real1.webp";
 import real2 from "../img/real2.webp";
@@ -41,6 +41,7 @@ import beak1 from "../img/beak1.webp";
 import beak2 from "../img/beak2.webp";
 import beak3 from "../img/beak3.webp";
 import beak4 from "../img/beak4.webp";
+import beak5 from "../img/beak5.webp";
 
 import pyC from "../img/compressed/pyC.webp";
 import soleC from "../img/compressed/soleC.webp";
@@ -122,6 +123,7 @@ export default function personalProjects() {
       img2: twit3,
       img3: twit4,
       compressed: twitcloneC,
+      link: "https://twitclone.netlify.app",
     },
     {
       id: 9,
@@ -130,13 +132,15 @@ export default function personalProjects() {
       stack: next,
       stack2: typescript,
       stack3: tailwind,
-      stack4: go,
+      stack4: zustand,
+      stack5: go,
       features:
         "(ongoing) real-time interactions such as tweeting, liking, reposting and following/unfollowing",
       img: beak1,
       img1: beak2,
       img2: beak3,
       img3: beak4,
+      img4: beak5,
       compressed: beakC,
     },
     {
@@ -169,8 +173,8 @@ export default function personalProjects() {
       id: 4,
       title: "Nssa",
       desc: "Nssa is a powerful backend tool designed to compare two Excel files and consolidate their differences into separate, downloadable files for easy analysis and reporting. This program is ideal for users who need to identify and manage discrepancies between datasets efficiently. By producing three distinct files, Nssa ensures comprehensive and organized comparison results, facilitating streamlined data management and decision-making processes.",
-      stack: nodejs,
-      stack2: expressjs,
+      stack: expressjs,
+      stack2: nodejs,
       features:
         "automatically consolidate differences into separate excel files",
       img: nssa,
@@ -183,10 +187,10 @@ export default function personalProjects() {
       title: "soleXchange",
       desc: "soleXchange is a modern e-commerce platform dedicated to offering a wide variety of footwear for men, women, and children. It aims to provide customers with an easy and enjoyable online shopping experience, featuring the latest trends and timeless classics.",
       stack: reactLogo,
-      stack2: expressjs,
-      stack3: nodejs,
-      stack4: postgre,
-      stack5: redux,
+      stack2: redux,
+      stack3: expressjs,
+      stack4: nodejs,
+      stack5: postgre,
       features: "On Hold",
       img: sole,
       compressed: soleC,
@@ -196,9 +200,9 @@ export default function personalProjects() {
       title: "EmployeeSelfService",
       desc: "EmployeeSelfService is a self-service platform designed for employees, offering easy access to manage personal information, view pay slips, request time off, and handle other HR-related tasks efficiently.",
       stack: reactLogo,
-      stack2: expressjs,
-      stack3: nodejs,
-      stack4: redux,
+      stack2: redux,
+      stack3: expressjs,
+      stack4: nodejs,
       stack5: mysql,
       features: "apply for leave/ loan, WIP",
       img: ess,
@@ -209,9 +213,9 @@ export default function personalProjects() {
       title: "HelpDesk",
       desc: "Helpdesk is an essential system designed to streamline internal support processes within organizations, enabling employees to log support requests, commonly known as tickets. This system enhances communication between staff and administrators, ensuring that issues are resolved efficiently and effectively.",
       stack: reactLogo,
-      stack2: nodejs,
+      stack2: zustand,
       stack3: expressjs,
-      stack4: zustand,
+      stack4: nodejs,
       stack5: mysql,
       features: "Logging tickets",
       img: help,
@@ -255,7 +259,7 @@ export default function personalProjects() {
                 <ArrowBackIcon
                   w={6}
                   h={6}
-                  _hover={{ backgroundColor: "#35FF69", borderRadius: "15px" }}
+                  _hover={{ backgroundColor: "#35ffa8", borderRadius: "15px" }}
                   onClick={goBack}
                 />
               </Box>
@@ -267,9 +271,24 @@ export default function personalProjects() {
 
               {proj.map((item, index) => (
                 <Box mt={5} mb={{ base: 2, lg: 0 }}>
-                  <Text color={"black"} fontSize={"xl"} as={"b"}>
-                    {item.title}
-                  </Text>
+                  {item.link ? (
+                    <Text
+                      color={"black"}
+                      fontSize={"xl"}
+                      as={"b"}
+                      _hover={{ color: "navy" }}
+                    >
+                      <Link to={item.link} target="_blank">
+                        {item.title}
+                        <ExternalLinkIcon ml={2} mb={1} />
+                      </Link>
+                    </Text>
+                  ) : (
+                    <Text color={"black"} fontSize={"xl"} as={"b"}>
+                      {item.title}
+                    </Text>
+                  )}
+
                   <Flex
                     fontSize={"18px"}
                     mt={2}
@@ -405,6 +424,21 @@ export default function personalProjects() {
                                 <Box flex="0 0 100%">
                                   <Image
                                     src={selectedCard.img3}
+                                    w="100%"
+                                    borderRadius="10px"
+                                    height={{
+                                      base: selectedCard.smallHeight,
+                                      md: selectedCard.height,
+                                    }}
+                                    border={"1px solid grey"}
+                                  />
+                                </Box>
+                              ) : null}
+
+                              {selectedCard.img4 ? (
+                                <Box flex="0 0 100%">
+                                  <Image
+                                    src={selectedCard.img4}
                                     w="100%"
                                     borderRadius="10px"
                                     height={{

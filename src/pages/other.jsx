@@ -28,6 +28,8 @@ import { React, useState, useRef } from "react";
 import privacycure from "../img/privacycure.webp";
 import twitcloneC from "../img/compressed/twitcloneC.webp";
 import twitclone from "../img/twitclone.webp";
+import privacycureC from "../img/compressed/privacycureC.webp";
+
 import mafa from "../img/mafa.png";
 import coding from "../img/coding.png";
 import briefcase from "../img/briefcase.png";
@@ -144,7 +146,7 @@ export default function Other() {
                         height={{ base: "30px", md: "36px" }}
                         mr={3}
                         _hover={{
-                          boxShadow: "0px 0px 10px #35FF69",
+                          boxShadow: "0px 0px 10px #35ffa8",
                           borderRadius: "10px",
                         }}
                       />
@@ -155,7 +157,7 @@ export default function Other() {
                         height={{ base: "34px", md: "43px" }}
                         mr={3}
                         _hover={{
-                          boxShadow: "0px 0px 10px #35FF69",
+                          boxShadow: "0px 0px 10px #35ffa8",
                           borderRadius: "10px",
                         }}
                       />
@@ -169,7 +171,7 @@ export default function Other() {
                         src={linkedin}
                         height={{ base: "34px", md: "38px" }}
                         _hover={{
-                          boxShadow: "0px 0px 10px #35FF69",
+                          boxShadow: "0px 0px 10px #35ffa8",
                           borderRadius: "10px",
                         }}
                       />
@@ -264,8 +266,16 @@ export default function Other() {
                 </Center>
 
                 <Box mt={5}>
-                  <Text color={"black"} fontSize={"xl"} as={"b"}>
-                    PrivacyCure
+                  <Text
+                    color={"black"}
+                    fontSize={"xl"}
+                    as={"b"}
+                    _hover={{ color: "navy" }}
+                  >
+                    <Link to={"https:privacycure.com"} target="_blank">
+                      PrivacyCure
+                      <ExternalLinkIcon ml={2} mb={1} />
+                    </Link>
                   </Text>
                   <Flex
                     fontSize={"18px"}
@@ -282,7 +292,7 @@ export default function Other() {
                         loading="lazy"
                         src={privacycure}
                         objectFit="cover"
-                        placeholderSrc={twitcloneC}
+                        placeholderSrc={privacycureC}
                         style={{
                           width: "100%",
                           height: "100%",
@@ -334,7 +344,7 @@ export default function Other() {
                       w={"50vw"}
                       variant={"outline"}
                       colorScheme="whatsapp"
-                      _hover={{ backgroundColor: "#35FF69" }}
+                      _hover={{ backgroundColor: "#35ffa8" }}
                     >
                       See More <ExternalLinkIcon ml={1} />
                     </Button>
