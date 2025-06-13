@@ -272,7 +272,7 @@ export default function Other() {
                     as={"b"}
                     _hover={{ color: "navy" }}
                   >
-                    <Link to={"https:privacycure.com"} target="_blank">
+                    <Link to={"https://privacycure.com"} target="_blank">
                       PrivacyCure
                       <ExternalLinkIcon ml={2} mb={1} />
                     </Link>
