@@ -192,6 +192,24 @@ export default function Other() {
                 </Text>
               </Box>
 
+              <Box mt={6} px={3}>
+                <Text fontSize={{ base: "md", lg: "lg" }}>
+                  Im also a co-owner of{" "}
+                  <span _hover={{ color: "green" }}>
+                    <Link
+                      to={"https://toitsolutions.co.zw"}
+                      target="_blank"
+                      style={{ textDecoration: "underline" }}
+                    >
+                      ToIT Solutions
+                    </Link>
+                  </span>{" "}
+                  which is an IT Services company. So for any website design &
+                  development, website redesign or even domain purchasing and
+                  emails you can contact us there and we will be happy to help
+                </Text>
+              </Box>
+
               <Box mb={5}>
                 {/* <Center pt={7}>
                   <Text fontSize={"xl"} fontWeight={"600"} as={"u"}>
