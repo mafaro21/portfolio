@@ -341,10 +341,7 @@ export default function Other() {
                           Zimbabwe-China Investment Symposium is a high-performance, secure event registration and management platform built for a major national economic summit. The system was engineered to handle high-traffic delegate onboarding, automate executive RSVP tracking, and streamline logistical data management for over 400 high-profile corporate and international attendees at Golden Conifer.
                         </ListItem>
                         <ListItem mt={3} color={"black"}>
-                          Features: downloading relevant documents related to
-                          data protection (CDPA, CDPR), processing and sending
-                          emails when potential clients fill in the contact
-                          form, english and shona languages
+                          Features: Automated digital delegate registration, real-time secure database tracking, instant email confirmation pipelines, optimized multi-device check-in layout, and scalable backend infrastructure capable of handling hundreds of concurrent corporate users.
                         </ListItem>
                       </UnorderedList>
 
