@@ -31,16 +31,26 @@ import privacycure2 from "../img/privacycure2.webp";
 import privacycure3 from "../img/privacycure3.webp";
 import privacycureC from "../img/compressed/privacycureC.webp";
 
+import symposium from "../img/symposium.webp";
+import symposium2 from "../img/symposium2.webp";
+import symposium3 from "../img/symposium3.webp";
+import symposium4 from "../img/symposium4.webp";
+import symposiumC from "../img/compressed/symposiumC.webp";
+
+
 import pcaudit from "../img/pcaudit.webp";
 import pcaudit1 from "../img/pcaudit1.webp";
 import pcaudit2 from "../img/pcaudit2.webp";
+
 import html from "../img/png/html.png";
 import css from "../img/png/css.png";
 import nodejs from "../img/png/nodejs.png";
 import flask from "../img/png/flask.png";
 import express from "../img/png/expressjs.png";
 import next from "../img/png/next.png";
+import mysql from "../img/png/mysql.png";
 import typescript from "../img/png/typescript.png";
+
 import Footer from "../components/footer";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -58,6 +68,24 @@ export default function Professional() {
   const proj = [
     {
       id: 1,
+      title: "Zimbabwe-China Investment Symposium",
+      desc: "A high-performance, secure event registration and management platform built for a major national economic summit. The system was engineered to handle high-traffic delegate onboarding, automate executive RSVP tracking, and streamline logistical data management for over 400 high-profile corporate and international attendees at Golden Conifer.",
+      link: "https://zimchinasymposium.com/",
+      stack: next,
+      stack2: express,
+      stack3: nodejs,
+      stack4: mysql,
+      features:
+        "Automated digital delegate registration, real-time secure database tracking, instant email confirmation pipelines, optimized multi-device check-in layout, and scalable backend infrastructure capable of handling hundreds of concurrent corporate users.",
+      img: symposium, // Make sure to swap these image variables out for your actual summit screenshots later!
+      img1: symposium2,
+      img2: symposium3,
+      img3: symposium4,
+      compressed: symposiumC,
+      // height: "300px",
+    },
+    {
+      id: 2,
       title: "Privacy Cure",
       desc: "Privacy Cure is an informational web platform designed to showcase the Data Protection Officer (DPO) services offered. It provides a clear and concise overview of the company's expertise in data compliance, including CDPA assessment, employee training, and breach response. The site is tailored to help businesses understand their obligations under regulations like CDPA and CDPR, ensuring they stay compliant while protecting customer trust.",
       link: "https://privacycure.com",

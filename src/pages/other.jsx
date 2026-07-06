@@ -30,6 +30,12 @@ import twitcloneC from "../img/compressed/twitcloneC.webp";
 import twitclone from "../img/twitclone.webp";
 import privacycureC from "../img/compressed/privacycureC.webp";
 
+import symposium from "../img/symposium.webp";
+import symposium2 from "../img/symposium2.webp";
+import symposium3 from "../img/symposium3.webp";
+import symposium4 from "../img/symposium4.webp";
+import symposiumC from "../img/compressed/symposiumC.webp";
+
 import mafa from "../img/mafa.png";
 import coding from "../img/coding.png";
 import briefcase from "../img/briefcase.png";
@@ -55,8 +61,9 @@ import vuejs from "../img/png/vuejs.png";
 import nodejs from "../img/png/nodejs.png";
 import redux from "../img/png/redux.png";
 import mongodb from "../img/png/mongodb.png";
-import expressjs from "../img/png/expressjs.png";
+import express from "../img/png/expressjs.png";
 import flask from "../img/png/flask.png";
+import next from "../img/png/next.png";
 
 import Sidebar from "../components/sidebar";
 import Bottombar from "../components/bottombar";
@@ -71,19 +78,23 @@ export default function Other() {
 
   const proj = [
     {
-      id: 1,
-      title: "Privacy Cure",
-      desc: "Privacy Cure is a website dedicated to supporting Data Protection Officers (DPOs) and privacy professionals. The website provides in-depth resources, tools, and insights to help DPOs manage data compliance, stay updated on regulatory changes, and adopt best practices in data protection.",
-      link: "https://privacycure.com",
-      stack: html,
-      stack2: css,
-      stack3: nodejs,
-      stack4: flask,
-      features:
-        "downloading the data protection act and the regulations, processing and sending emails when potential client fill in the contact form",
-      img: privacycure,
-      height: "300px",
-    },
+          id: 1,
+          title: "Zimbabwe-China Investment Symposium",
+          desc: "A high-performance, secure event registration and management platform built for a major national economic summit. The system was engineered to handle high-traffic delegate onboarding, automate executive RSVP tracking, and streamline logistical data management for over 400 high-profile corporate and international attendees at Golden Conifer.",
+          link: "https://zimchinasymposium.com/",
+          stack: next,
+          stack2: express,
+          stack3: nodejs,
+          stack4: mysql,
+          features:
+            "Automated digital delegate registration, real-time secure database tracking, instant email confirmation pipelines, optimized multi-device check-in layout, and scalable backend infrastructure capable of handling hundreds of concurrent corporate users.",
+          img: symposium, // Make sure to swap these image variables out for your actual summit screenshots later!
+          img1: symposium2,
+          img2: symposium3,
+          img3: symposium4,
+          compressed: symposiumC,
+          // height: "300px",
+        },
   ];
 
   const handleExpand = (item) => {
@@ -290,8 +301,8 @@ export default function Other() {
                     as={"b"}
                     _hover={{ color: "navy" }}
                   >
-                    <Link to={"https://privacycure.com"} target="_blank">
-                      PrivacyCure
+                    <Link to={"https://zimchinasymposium.com"} target="_blank">
+                      Zimbabwe-China Investment Symposium
                       <ExternalLinkIcon ml={2} mb={1} />
                     </Link>
                   </Text>
@@ -301,16 +312,16 @@ export default function Other() {
                     direction={{ base: "column", md: "row" }}
                   >
                     <Box
-                      src={twitclone}
+                      src={symposium}
                       w={{ base: "100%", md: "60%" }}
                       borderRadius={"14px"}
                       // boxShadow={"3px 3px #0f7171"}
                     >
                       <LazyLoadImage
                         loading="lazy"
-                        src={privacycure}
+                        src={symposium}
                         objectFit="cover"
-                        placeholderSrc={privacycureC}
+                        placeholderSrc={symposiumC}
                         style={{
                           width: "100%",
                           height: "100%",
@@ -327,15 +338,7 @@ export default function Other() {
                     >
                       <UnorderedList>
                         <ListItem color={"black"}>
-                          Privacy Cure is an informational web platform designed
-                          to showcase the Data Protection Officer (DPO) services
-                          offered. It provides a clear and concise overview of
-                          the company's expertise in data compliance, including
-                          CDPA assessment, employee training, and breach
-                          response. The site is tailored to help businesses
-                          understand their obligations under regulations like
-                          CDPA and CDPR, ensuring they stay compliant while
-                          protecting customer trust.
+                          Zimbabwe-China Investment Symposium is a high-performance, secure event registration and management platform built for a major national economic summit. The system was engineered to handle high-traffic delegate onboarding, automate executive RSVP tracking, and streamline logistical data management for over 400 high-profile corporate and international attendees at Golden Conifer.
                         </ListItem>
                         <ListItem mt={3} color={"black"}>
                           Features: downloading relevant documents related to
@@ -346,10 +349,10 @@ export default function Other() {
                       </UnorderedList>
 
                       <HStack spacing={1} mt={2} ml={4}>
-                        <Image src={html} height={"30px"} />
-                        <Image src={css} height={"30px"} />
+                        <Image src={next} height={"30px"} />
+                        <Image src={express} height={"30px"} />
                         <Image src={nodejs} height={"30px"} />
-                        <Image src={flask} height={"30px"} />
+                        <Image src={mysql} height={"30px"} />
                       </HStack>
                     </Box>
                   </Flex>
